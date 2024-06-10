@@ -1,0 +1,254 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px 20px;
+    color: #fff;
+    position: relative;
+}
+
+.header-container .logo img {
+    height: 30px;
+}
+
+.header-container .navigation {
+    display: flex;
+    align-items: center;
+}
+
+.header-container .navigation a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.header-container .search-bar input {
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    outline: 0;
+    width: 200px;
+}
+
+.header-container .auth-buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    text-decoration: none; 
+    border-radius: 5px; 
+}
+.header-container .auth-buttons a:hover{
+    background-color: darkblue;
+}
+
+.header-container .auth-buttons .lang img {
+    height: 15px;
+    margin-left: 5px;
+}
+
+.header-container .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.hero {
+    text-align: center;
+    background-color: #111;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    z-index: 10;
+    position: relative;
+}
+
+.hero p a {
+    color: #4f8ef7;
+    text-decoration: none;
+}
+
+.hero form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.hero form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.hero form button {
+    padding: 10px;
+    border: none;
+    background-color: blue;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    z-index: 1111;
+}
+.hero .crypto-image {
+    position: absolute;
+    top: 40px;
+    right: 70px;
+    z-index: 0;
+    width: 250px;
+    opacity: 0.9;
+}
+
+.hero .subscribe {
+    display: block;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #222;
+    padding: 10px 0;
+}
+
+.footer-nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+/* Additional CSS */
+.contest {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #f0f2f5, #f7f8fa);
+    padding: 50px 20px;
+    position: relative;
+    color: #333;
+}
+
+.contest h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contest p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contest .tags {
+    display: flex;
+    gap: 10px;
+}
+
+.contest .tag {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #f1f1f1;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.contest .tag.airdrops {
+    background-color: #ffb3b3;
+}
+
+.contest .tag.giveaways {
+    background-color: #e0b3ff;
+}
+
+.contest .tag.trading {
+    background-color: #ffe0b3;
+}
+
+.contest .tag.listing {
+    background-color: #b3d9ff;
+    position: relative;
+    z-index: 10;
+}
+
+.contest .trophy-image {
+    width: 250px;
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        }
+        .header-container .navigation {
+            display: none;
+            flex-direction: column;
+            background-color: #000;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            }
+    .header-container .search-bar{
+        visibility: hidden;
+        }
+    .header-container .navigation.show {
+            display: flex;
+            }
+            .header-container .navigation .close-btn {
+                align-self: flex-end;
+                margin-right: 20px;
+                font-size: 1.5em;
+                cursor: pointer;
+                }
+                .header-container .menu-toggle {
+                    display: block;
+                    position: absolute;
+                    right: 30px;
+                    }
+                    .hero h1 {
+                        font-size: 2em;
+                        }
+                        .hero .crypto-image {
+                            visibility: hidden;
+                            }
+                            .footer-nav {
+                                flex-direction: column;
+                                }
+                                .footer-nav a {
+                                    margin: 10px 0;
+                                    }
+                                .contest {
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    padding: 30px 10px;
+                                }
+                                
+                                .contest .trophy-image {
+                                    position: static;
+                                    width: 150px;
+                                    margin-top: 20px;
+                                }
+}

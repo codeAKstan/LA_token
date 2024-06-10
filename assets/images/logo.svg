@@ -1,0 +1,8 @@
+<svg width="200" height="50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circle with LA -->
+  <circle cx="25" cy="25" r="20" fill="blue" />
+  <text x="25" y="30" font-family="Arial" font-size="20" text-anchor="middle" fill="white" font-weight="bold">LA</text>
+
+  <!-- LAtoken text -->
+  <text x="55" y="30" font-family="Arial" font-size="20" fill="blue" font-weight="bold">LAtoken</text>
+</svg>
