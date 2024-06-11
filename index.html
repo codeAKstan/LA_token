@@ -25,7 +25,24 @@
                 <input type="text" placeholder="Find any token or reward"><br>
             </div>
             <div class="auth-buttons">
-                <a href="#">Connect wallet</a>
+                <a href="#" id="connectWalletButton">Connect wallet</a>
+            </div>
+            <!-- wallet modal popup -->
+            <div id="walletModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Connect Wallet</h2>
+                    <ul>
+                        <li><a href="#">WalletConnect</a></li>
+                        <li><a href="#">Browser Wallet</a></li>
+                        <li><a href="#">Bitget Wallet</a></li>
+                        <li><a href="#">OKX Wallet</a></li>
+                        <li><a href="#">Fluvi</a></li>
+                        <li><a href="#">MetaMask</a></li>
+                        <li><a href="#">Bybit Wallet</a></li>
+                        <li><a href="#">Compass Wallet</a></li>
+                    </ul>
+                </div>
             </div>
             <button class="menu-toggle">☰</button>
         </div>
@@ -41,22 +58,20 @@
             <img class="crypto-image" src="assets/images/Slide1.webp" alt="Crypto Image">
         </section>
 
-        <!--Earn Cryptocurrency -->
-        
-    <section class="contest">
-    <h2>Earn cryptocurrency in various daily contests</h2>
-    <p>Choose the desired category and crypto to start earning</p>
-    <div class="tags">
-        <span class="tag airdrops">Airdrops <img src="assets/images/bitcoin.png" alt=""></span>
-        <span class="tag giveaways">Giveaways <img src="assets/images/gift.png" alt=""></span>
-        <span class="tag trading">Trading competitions <img src="assets/images/exchange-rate.png" alt=""></span>
-        <span class="tag listing">Listing competitions <img src="assets/images/trophy.png" alt=""></span>
-    </div>
-    <img class="trophy-image" src="assets/images/cup.png" alt="Trophy Image">
-    </section>
-    
+        <!-- Earn Cryptocurrency -->
+        <section class="contest">
+            <h2>Earn cryptocurrency in various daily contests</h2>
+            <p>Choose the desired category and crypto to start earning</p>
+            <div class="tags">
+                <span class="tag airdrops">Airdrops <img src="assets/images/bitcoin.png" alt=""></span>
+                <span class="tag giveaways">Giveaways <img src="assets/images/gift.png" alt=""></span>
+                <span class="tag trading">Trading competitions <img src="assets/images/exchange-rate.png" alt=""></span>
+                <span class="tag listing">Listing competitions <img src="assets/images/trophy.png" alt=""></span>
+            </div>
+            <img class="trophy-image" src="assets/images/cup.png" alt="Trophy Image">
+        </section>
 
-        <!--Social Media -->
+        <!-- Social Media -->
         <section class="social-media">
             <h2>Don't miss opportunity to earn crypto!</h2>
             <div class="social-buttons">
@@ -73,43 +88,36 @@
             </ul>
         </section>
 
-        <!--FAQ -->
+        <!-- FAQ -->
         <section class="faq">
             <h2>FAQ</h2>
             <div class="faq-item">
                 <h3 class="faq-question">What is trading competitions?</h3>
                 <div class="faq-answer">
-                    <p>A trading competition is an event in which you need to trade more volume than others in order to earn a reward in the desired cryptocurrency. Prizes are divided into several sectors, in order to get into one sector or another, read the terms of the competition and trade the largest volume in order to move as far as possible and get the biggest reward.</p>
+                    <p>A trading competition is an event in which you need to trade more volume than others in order to
+                        earn a reward in the desired cryptocurrency. Prizes are divided into several sectors, in order
+                        to get into one sector or another, read the terms of the competition and trade the largest
+                        volume in order to move as far as possible and get the biggest reward.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <h3 class="faq-question">Do I get rewards immediately after completing tasks?</h3>
                 <div class="faq-answer">
-                    <p>Distribution of rewards is made in accordance with the distribution date in Terms and Conditions. All tokens will be automatically credited to your LATOKEN wallet balance.</p>
+                    <p>Distribution of rewards is made in accordance with the distribution date in Terms and Conditions.
+                        All tokens will be automatically credited to your LATOKEN wallet balance.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <h3 class="faq-question">Is it safe?</h3>
                 <div class="faq-answer">
-                    <p>Yes, when trading on the LATOKEN exchange, your funds are completely safe, and the competition is under strict moderation control without dishonesty on the part of other participants.</p>
+                    <p>Yes, when trading on the LATOKEN exchange, your funds are completely safe, and the competition is
+                        under strict moderation control without dishonesty on the part of other participants.</p>
                 </div>
             </div>
         </section>
-        
     </main>
 
     <script src="assets/scripts/scripts.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.faq-question').forEach(item => {
-                item.addEventListener('click', () => {
-                    const answer = item.nextElementSibling;
-                    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-                });
-            });
-        });
-        </script>
-        
 </body>
 
 </html>

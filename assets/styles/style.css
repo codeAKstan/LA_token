@@ -43,10 +43,11 @@ body {
     padding: 10px 20px;
     background-color: blue;
     color: white;
-    text-decoration: none; 
-    border-radius: 5px; 
+    text-decoration: none;
+    border-radius: 5px;
 }
-.header-container .auth-buttons a:hover{
+
+.header-container .auth-buttons a:hover {
     background-color: darkblue;
 }
 
@@ -102,8 +103,9 @@ body {
     color: #fff;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
-    z-index: 1111;
+    /* z-index: 1111; */
 }
+
 .hero .crypto-image {
     position: absolute;
     top: 40px;
@@ -132,6 +134,7 @@ body {
     margin: 0 15px;
     text-decoration: none;
 }
+
 /* Additional CSS */
 .contest {
     display: flex;
@@ -156,6 +159,7 @@ body {
 .contest .tags {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .contest .tag {
@@ -181,7 +185,7 @@ body {
 .contest .tag.listing {
     background-color: #b3d9ff;
     position: relative;
-    z-index: 10;
+    /* z-index: 10; */
 }
 
 .contest .trophy-image {
@@ -218,13 +222,28 @@ body {
     color: white;
     font-size: 1em;
     text-decoration: none;
+    border: none;
 }
 
-.social-btn.telegram { background-color: #0088cc; }
-.social-btn.instagram { background-color: #d6249f; }
-.social-btn.discord { background-color: #7289da; }
-.social-btn.twitter { background-color: #1da1f2; }
-.social-btn.facebook { background-color: #3b5998; }
+.social-btn.telegram {
+    background-color: #0088cc;
+}
+
+.social-btn.instagram {
+    background-color: #d6249f;
+}
+
+.social-btn.discord {
+    background-color: #7289da;
+}
+
+.social-btn.twitter {
+    background-color: #1da1f2;
+}
+
+.social-btn.facebook {
+    background-color: #3b5998;
+}
 
 .earn-crypto h3 {
     font-size: 1.5em;
@@ -322,58 +341,160 @@ body {
     .header-container {
         flex-direction: column;
         text-align: center;
-        }
-        .header-container .navigation {
-            display: none;
-            flex-direction: column;
-            background-color: #000;
-            position: absolute;
-            top: 50px;
-            left: 0;
-            width: 100%;
-            padding: 20px 0;
-            }
-    .header-container .search-bar{
+    }
+
+    .header-container .navigation {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .header-container .search-bar {
         visibility: hidden;
-        }
+    }
+
     .header-container .navigation.show {
-            display: flex;
-            }
-            .header-container .navigation .close-btn {
-                align-self: flex-end;
-                margin-right: 20px;
-                font-size: 1.5em;
-                cursor: pointer;
-                }
-                .header-container .menu-toggle {
-                    display: block;
-                    position: absolute;
-                    right: 30px;
-                    }
-                    .hero h1 {
-                        font-size: 2em;
-                        }
-                        .hero .crypto-image {
-                            visibility: hidden;
-                            }
-                            .footer-nav {
-                                flex-direction: column;
-                                }
-                                .footer-nav a {
-                                    margin: 10px 0;
-                                    }
-                                .contest {
-                                    flex-direction: column;
-                                    align-items: flex-start;
-                                    padding: 30px 10px;
-                                }
-                                
-                                .contest .trophy-image {
-                                    position: static;
-                                    width: 150px;
-                                    margin-top: 20px;
-                                }
-                                .social-buttons {
-                                    flex-direction: column;
-                                }
+        display: flex;
+    }
+
+    .header-container .navigation .close-btn {
+        align-self: flex-end;
+        margin-right: 20px;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .header-container .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero .crypto-image {
+        visibility: hidden;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+    }
+
+    .footer-nav a {
+        margin: 10px 0;
+    }
+
+    .contest {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 10px;
+    }
+
+    .contest .tags .tag {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    .contest .trophy-image {
+        position: static;
+        width: 150px;
+        margin-top: 20px;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+        /* width: 120px; */
+        padding: 70px 70px;
+    }
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.modal ul li {
+    margin: 10px 0;
+}
+
+.modal ul li a {
+    text-decoration: none;
+    color: #007bff;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s;
+}
+
+.modal ul li a:hover {
+    background-color: #ddd;
+}
+
+.modal p {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.modal p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.modal p a:hover {
+    text-decoration: underline;
 }
