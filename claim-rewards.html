@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Wallet</title>
+    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/claim.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="connect-wallet">
+            <div class="wallet-list">
+                <h2>Connect Wallet</h2>
+                <div class="wallet-item">
+                    <img src="assets/images/MetaMask.png" alt="Metamask">
+                    <span>Metamask</span>
+                    <button>Connect</button>
+                </div>
+                <div class="wallet-item">
+                    <img src="assets/images/bb.png" alt="Binance">
+                    <span>Binance web3 wallet</span>
+                    <button>Connect</button>
+                </div>
+                <div class="wallet-item">
+                    <img src="assets/images/bybit.png" alt="Bybit">
+                    <span>Bybit web3 wallet</span>
+                    <button>Connect</button>
+                </div>
+                <!-- <div class="wallet-item">
+                    <img src="" alt="Ledger">
+                    <span>Ledger</span>
+                    <button>Connect</button>
+                </div> -->
+                <a href="">Connect to another wallet</a>
+                <!-- <div class="beginner-guide">
+                    <span>Beginner's Guide</span>
+                    <a href="#">Learn More</a>
+                </div> -->
+            </div>
+            <div class="wallet-connect">
+                <h2>Wallet Connect</h2>
+                <div class="qr-code" id="qrcode"></div>
+                <p>Scan the QR code by any mobile device wallet</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: "latoken",
+            width: 200,
+            height: 200
+        });
+    </script>
+</body>
+</html>
