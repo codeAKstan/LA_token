@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,47 @@
     <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/styles/claim.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@latest/dist/umd/index.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+        .loader-container {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 
 </head>
+
 <body>
     <div class="container">
         <div class="connect-wallet">
@@ -17,28 +57,19 @@
                 <div class="wallet-item">
                     <img src="assets/images/MetaMask.png" alt="Metamask">
                     <span>Metamask</span>
-                    <button>Connect</button>
+                    <button onclick="connectMetaMask()">Connect</button>
                 </div>
                 <div class="wallet-item">
                     <img src="assets/images/bb.png" alt="Binance">
                     <span>Binance web3 wallet</span>
-                    <button>Connect</button>
+                    <button onclick="connectBinance()">Connect</button>
                 </div>
                 <div class="wallet-item">
                     <img src="assets/images/bybit.png" alt="Bybit">
                     <span>Bybit web3 wallet</span>
-                    <button>Connect</button>
+                    <button onclick="connectBybit()">Connect</button>
                 </div>
-                <!-- <div class="wallet-item">
-                    <img src="" alt="Ledger">
-                    <span>Ledger</span>
-                    <button>Connect</button>
-                </div> -->
-                <a href="">Connect to another wallet</a>
-                <!-- <div class="beginner-guide">
-                    <span>Beginner's Guide</span>
-                    <a href="#">Learn More</a>
-                </div> -->
+                <a href="#" onclick="connectWalletConnect()">Connect to another wallet</a>
             </div>
             <div class="wallet-connect">
                 <h2>Wallet Connect</h2>
@@ -47,12 +78,80 @@
             </div>
         </div>
     </div>
+    <!-- loader -->
+    <div id="loader" class="loader-container">
+        <div class="loader"></div>
+    </div>
+
     <script>
+        // Initialize QRCode with placeholder text
         var qrcode = new QRCode(document.getElementById("qrcode"), {
             text: "latoken",
             width: 200,
             height: 200
         });
+
+        // Connect to MetaMask
+        async function connectMetaMask() {
+            if (window.ethereum) {
+                const web3 = new Web3(window.ethereum);
+                try {
+                    // Request account access if needed
+                    await window.ethereum.request({ method: 'eth_requestAccounts' });
+                    const accounts = await web3.eth.getAccounts();
+                    alert(`Connected: ${accounts[0]}`);
+                } catch (error) {
+                    console.error("User denied account access", error);
+                }
+            } else {
+                alert('MetaMask is not installed!');
+            }
+        }
+
+        // other wallets
+
+        function connectBinance() {
+            showLoader();
+            setTimeout(() => {
+                hideLoader();
+                swal("Oops", "Try another wallet. Something went wrong!", "error");
+            }, 7000);
+        }
+
+        function connectBybit() {
+            showLoader();
+            setTimeout(() => {
+                hideLoader();
+                swal("Oops", "Try another wallet. Something went wrong!", "error");
+            }, 7000);
+        }
+
+        // Connect to WalletConnect
+        async function connectWalletConnect() {
+            const provider = new WalletConnectProvider.default({
+                infuraId: "YOUR_INFURA_PROJECT_ID" // Replace with your Infura project ID
+            });
+
+            await provider.enable();
+
+            const web3 = new Web3(provider);
+            const accounts = await web3.eth.getAccounts();
+            alert(`Connected: ${accounts[0]}`);
+
+            // Generate QR Code
+            qrcode.clear();
+            qrcode.makeCode(provider.connector.uri);
+        }
+        // Show loader
+        function showLoader() {
+            document.getElementById("loader").style.display = "flex";
+        }
+
+        // Hide loader
+        function hideLoader() {
+            document.getElementById("loader").style.display = "none";
+        }
     </script>
 </body>
+
 </html>
