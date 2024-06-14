@@ -100,4 +100,7 @@ a:hover {
     .wallet-connect {
         flex: 1 1 100%;
     }
+    .wallet-connect {
+        display: none;
+    }
 }
