@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Successful</title>
+    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #10131C;
+            color: white;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+
+        .eligibility,
+        .claim {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .claim {
+            color: #ff007a;
+            position: relative;
+        }
+
+        .claim::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ff007a;
+        }
+
+        .success-card {
+            background: #1C1E29;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .success-icon {
+            margin-bottom: 20px;
+        }
+
+        .success-icon svg {
+            display: block;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .claimed-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2A2D3A;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .label {
+            font-size: 14px;
+        }
+
+        .tokens {
+            background: #3F4456;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .add-wallet-button {
+            background-color: #ff007a;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .message {
+                font-size: 14px;
+            }
+
+            .add-wallet-button {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+
+        /* Error Popup Styles */
+        #error-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .error-content {
+            background: black;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .close-button {
+            background-color: #ff007a;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="eligibility">Eligibility</div>
+            <div class="claim">Claim</div>
+        </div>
+        <div class="success-card">
+            <div class="success-icon" style="color: #00C853;">
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM10.2426 17.0711L5.17157 12L6.58579 10.5858L10.2426 14.2426L17.4142 7.07107L18.8284 8.48528L10.2426 17.0711Z"
+                        fill="#00C853" />
+                </svg>
+            </div>
+            <h1>Claim Successful</h1>
+            <p class="message">Congratulations! You've successfully claimed your tokens. You can now add them to your
+                wallet. Select 'Add to Wallet' below to complete the process.</p>
+            <div class="claimed-info">
+                <span class="label">You have claimed</span>
+                <span class="tokens">91 LAIKO</span>
+            </div>
+            <button class="add-wallet-button" onclick="showMessage()">Add to wallet</button>
+        </div>
+    </div>
+    <div id="error-popup" class="error-popup">
+        <div class="error-content">
+            <p class="error-message">An error occurred</p>
+            <button class="close-button" onclick="closeError()">Close</button>
+        </div>
+    </div>
+    <script>
+        function showMessage() {
+            setTimeout(function () {
+                document.getElementById('error-popup').style.display = 'flex';
+            }, 5000);
+        }
+
+        function closeError() {
+            document.getElementById('error-popup').style.display = 'none';
+        }
+
+    </script>
+</body>
+
+</html>
