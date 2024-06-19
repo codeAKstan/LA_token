@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <title>Airdrops</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.all-airdrops {
+    padding: 10px 20px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.airdrop-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.airdrop-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.airdrop-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.airdrop-header img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.airdrop-status {
+    margin-bottom: 10px;
+}
+
+.live-now {
+    color: green;
+    font-weight: bold;
+}
+
+.airdrop-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.airdrop-info div {
+    display: flex;
+    align-items: center;
+}
+
+.airdrop-info img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.see-details {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+.see-details a{
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (min-width: 600px) {
+    .airdrop-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 900px) {
+    .airdrop-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Airdrops</h1>
+        <p>Be the first to know about upcoming airdrops here</p>
+        <button class="all-airdrops">All airdrops</button>
+        <h2>Current airdrops (3)</h2>
+        <div class="airdrop-grid">
+            <div class="airdrop-card">
+                <div class="airdrop-header">
+                    <img src="assets/images/football.png" alt="TOPGOAL & Footballcraft">
+                    <div>
+                        <h3>Footballcraft</h3>
+                        <p>TOPGOAL...</p>
+                    </div>
+                </div>
+                <div class="airdrop-status">
+                    <span class="live-now">Live now</span>
+                </div>
+                <div class="airdrop-info">
+                    <div>
+                        <img src="assets/images/trophy (1).png" alt="Rewards">
+                        <p>10,000</p>
+                    </div>
+                    <div>
+                        <img src="assets/images/badge.png" alt="Winners">
+                        <p>10,000</p>
+                    </div>
+                    <div>
+                        <p>200 <img src="assets/images/diamond.png" alt="Diamonds"></p>
+                    </div>
+                </div>
+                <button class="see-details"><a  href="claim-rewards.html">Participate</a></button>
+            </div>
+            <!-- Repeat the airdrop-card for 2 more airdrops -->
+            <div class="airdrop-card">
+                <div class="airdrop-header">
+                    <img src="assets/images/gpt.png" alt="Chain-gpt">
+                    <div>
+                        <h3>Chain-gpt</h3>
+                        <p>CCgpt...</p>
+                    </div>
+                </div>
+                <div class="airdrop-status">
+                    <span class="live-now">Live now</span>
+                </div>
+                <div class="airdrop-info">
+                    <div>
+                        <img src="assets/images/trophy (1).png" alt="Rewards">
+                        <p>3000</p>
+                    </div>
+                    <div>
+                        <img src="assets/images/badge.png" alt="Winners">
+                        <p>1500</p>
+                    </div>
+                    <div>
+                        <p>100 <img src="assets/images/diamond.png" alt="Diamonds"></p>
+                    </div>
+                </div>
+                <button class="see-details"><a  href="claim-rewards.html">Participate</a></button>
+            </div>
+            <div class="airdrop-card">
+                <div class="airdrop-header">
+                    <img src="assets/images/bull.png" alt="Bullieverse">
+                    <div>
+                        <h3>Bullieverse</h3>
+                        <p>The $bull...</p>
+                    </div>
+                </div>
+                <div class="airdrop-status">
+                    <span class="live-now">Live now</span>
+                </div>
+                <div class="airdrop-info">
+                    <div>
+                        <img src="assets/images/trophy (1).png" alt="Rewards">
+                        <p>20,000</p>
+                    </div>
+                    <div>
+                        <img src="assets/images/badge.png" alt="Winners">
+                        <p>15,000</p>
+                    </div>
+                    <div>
+                        <p>500 <img src="assets/images/diamond.png" alt="Diamonds"></p>
+                    </div>
+                </div>
+                <button class="see-details"><a  href="claim-rewards.html">Participate</a></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

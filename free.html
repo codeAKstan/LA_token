@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <title>Free Crypto Currency</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.crypto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.crypto-card {
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.crypto-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.bitcoin {
+    background-color: #f7931a;
+}
+
+.elrond {
+    background-color: #32323e;
+}
+
+.btt {
+    background-color: #8c54ff;
+}
+
+.hbar {
+    background-color: #000000;
+}
+
+@media (max-width: 600px) {
+    .crypto-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Claim For Free <br> Any of these Crypto Currencies</h1>
+        <p>All Crypto orders are fulfilled within 48 hours</p>
+        <div class="crypto-grid">
+            <div class="crypto-card bitcoin" onclick="window.location.href='claim-rewards.html'">
+                <img src="assets/images/bitcoin-icon-small.png" alt="Bitcoin Icon">
+                <h2>Free Bitcoin</h2>
+                <p>$5.00 - $200.00</p>
+            </div>
+            <div class="crypto-card elrond" onclick="window.location.href='claim-rewards.html'">
+                <img src="assets/images/crypto-icon-small.png" alt="Elrond Icon">
+                <h2>Free CRO Coin</h2>
+                <p>$5.00 - $200.00</p>
+            </div>
+            <div class="crypto-card btt"  onclick="window.location.href='claim-rewards.html'">
+                <img src="assets/images/uniswap-icon-small.png" alt="BTT Icon">
+                <h2>Free Uniswap Coin</h2>
+                <p>$5.00 - $200.00</p>
+            </div>
+            <div class="crypto-card hbar" onclick="window.location.href='claim-rewards.html'">
+                <img src="assets/images/tezos-icon-small.png" alt="HBAR Icon">
+                <h2>Free Tezos Coin</h2>
+                <p>$5.00 - $200.00</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
