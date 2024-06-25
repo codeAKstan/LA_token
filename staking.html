@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/analos.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>Staking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            padding: 10px 20px;
+            background: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        nav ul li.active {
+            background: #4a4aff;
+            color: #fff;
+        }
+
+        section.assets {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section.assets h2 {
+            margin-top: 0;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .filters label {
+            margin-right: 10px;
+        }
+
+        .filters select,
+        .filters input {
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .card .info h3 {
+            margin: 10px 0;
+        }
+
+        .card .info p {
+            margin: 5px 0;
+        }
+
+        .card .info .apy,
+        .card .info .duration {
+            font-weight: bold;
+        }
+
+        button.sold-out {
+            padding: 10px;
+            border: none;
+            background: #ccc;
+            color: #fff;
+            border-radius: 5px;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Staking</h1>
+            <p>Start earning rewards from your assets</p>
+        </header>
+        <nav>
+            <ul>
+                <li class="active">Fixed</li>
+                <li>Flexible (Soon)</li>
+                <!-- <li>Fixed+Extra</li> -->
+            </ul>
+        </nav>
+        <section class="assets">
+            <h2>Assets to stake</h2>
+            <div class="filters">
+                <label for="filter">Filter by:</label>
+                <select id="filter">
+                    <option value="annual-rate">Annual Rate</option>
+                </select>
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <img src="assets/images/flchu.jpg" alt="FLCHU">
+                    <div class="info">
+                        <h3>FLCHU</h3>
+                        <p>Annual rate (APY): <span class="apy">400.00%</span></p>
+                        <p>Duration (days): <span class="duration">120</span></p>
+                        <button class="sold-out">Sold out</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/EAD.png" alt="EAD">
+                    <div class="info">
+                        <h3>EAD</h3>
+                        <p>Annual rate (APY): <span class="apy">250.00%</span></p>
+                        <p>Duration (days): <span class="duration">60, 120, 180</span></p>
+                        <button class="sold-out">Sold out</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/PBT.png" alt="PBT">
+                    <div class="info">
+                        <h3>PBT</h3>
+                        <p>Annual rate (APY): <span class="apy">200.00%</span></p>
+                        <p>Duration (days): <span class="duration">180, 270, 360</span></p>
+                        <button class="sold-out">Sold out</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/syng.jpeg" alt="SYNG">
+                    <div class="info">
+                        <h3>SYNG</h3>
+                        <p>Annual rate (APY): <span class="apy">200.00%</span></p>
+                        <p>Duration (days): <span class="duration">180</span></p>
+                        <button class="sold-out">Sold out</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="faq">
+        <h2>FAQ</h2>
+        <div class="faq-item">
+            <h3 class="faq-question">What is staking?</h3>
+            <div class="faq-answer">
+                <p>Staking is an activity where you can lock your assets in Stake to support a blockchain network for a
+                    reward.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">How can I get rewards from my assets?</h3>
+            <div class="faq-answer">
+                <p>Stake your assets for the preferred duration and annual rate until the end of the stake.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">Can I automatically reinvest my asets in the same stake?</h3>
+            <div class="faq-answer">
+                <p>Yes. Please choose «Auto prolongation» while making new Stake.</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>

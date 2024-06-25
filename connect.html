@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/analos.png" type="image/x-icon">
     <title>Connect wallet</title>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <style>
@@ -139,6 +139,7 @@
             0% {
                 transform: rotate(0deg);
             }
+
             100% {
                 transform: rotate(360deg);
             }
@@ -194,7 +195,7 @@
             const allFilled = Array.from(phraseBoxes).every(input => input.value.trim() !== '');
 
             if (!allFilled) {
-                swal ('Please fill in all the words.');
+                swal('Please fill in all the words.');
                 return;
             }
 

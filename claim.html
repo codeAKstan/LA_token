@@ -1,140 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LA_token Airdrop</title>
-    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <title>analoS Airdrop</title>
+    <link rel="shortcut icon" href="assets/images/analos.png" type="image/x-icon">
     <style>
-        body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(180deg, #000428, #004e92);
-    color: white;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            /* background: linear-gradient(180deg, #000428, #004e92); */
+            background-color: #000;
+            color: white;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.container {
-    text-align: center;
-    padding: 20px;
-    max-width: 600px;
-    margin: auto;
-}
+        .container {
+            text-align: center;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
 
-.airdrop {
-    background-color: #ff007a;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-}
+        .airdrop {
+            /* background-color: #ff007a; */
+            background: linear-gradient(180deg, #000428, #004e92);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
 
-main {
-    margin-top: 50px;
-}
+        main {
+            margin-top: 50px;
+        }
 
-h1 {
-    font-size: 3em;
-    line-height: 1.2;
-}
+        h1 {
+            font-size: 3em;
+            line-height: 1.2;
+        }
 
-.cta {
-    margin-top: 20px;
-}
+        .cta {
+            margin-top: 20px;
+        }
 
-.cta p {
-    margin-bottom: 20px;
-}
+        .cta p {
+            margin-bottom: 20px;
+        }
 
-.claim-button {
-    background-color: #ff007a;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 25px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
+        .claim-button {
+            /* background-color: #ff007a; */
+            background: linear-gradient(180deg, #000428, #004e92);
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
-footer {
-    margin-top: 40px;
-}
+        footer {
+            margin-top: 40px;
+        }
 
-.connect-wallet {
-    background-color: transparent;
-    border: 2px solid #ff007a;
-    padding: 10px 20px;
-    border-radius: 25px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
+        .connect-wallet {
+            background-color: transparent;
+            border: 2px solid #ff007a;
+            padding: 10px 20px;
+            border-radius: 25px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
-.loader {
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-}
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            /* Safari */
+            animation: spin 2s linear infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
 
-/* Safari */
-@-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-}
+        /* Safari */
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 2.5em;
-    }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
 
-    .claim-button, .connect-wallet {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
 
-    .loader {
-        width: 80px;
-        height: 80px;
-        border-width: 12px;
-    }
-}
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
 
+            .claim-button,
+            .connect-wallet {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+
+            .loader {
+                width: 80px;
+                height: 80px;
+                border-width: 12px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
-            <div class="logo">LA_token</div>
+            <div class="logo"><img src="assets/images/analos.png" alt="analoS logo"
+                    style="height: 32px; width: 32px;">analoS</div>
             <div class="airdrop">airdrop</div>
         </header>
         <main>
@@ -149,14 +167,15 @@ footer {
     <div class="loader" id="loader" style="display:none;"></div>
     <script>
         function claimReward() {
-    const loader = document.getElementById('loader');
-    loader.style.display = 'block';
-    setTimeout(() => {
-        loader.style.display = 'none';
-        window.location.href = 'success.html';
-    }, 10000);
-}
+            const loader = document.getElementById('loader');
+            loader.style.display = 'block';
+            setTimeout(() => {
+                loader.style.display = 'none';
+                window.location.href = 'success.html';
+            }, 10000);
+        }
 
     </script>
 </body>
+
 </html>

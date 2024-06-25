@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Claim Successful</title>
-    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/analos.png" type="image/x-icon">
     <style>
         body,
         html {
@@ -41,7 +41,7 @@
         }
 
         .claim {
-            color: #ff007a;
+            color: #00407f;
             position: relative;
         }
 
@@ -52,7 +52,7 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: #ff007a;
+            background-color: #fff;
         }
 
         .success-card {
@@ -96,14 +96,14 @@
         }
 
         .tokens {
-            background: #3F4456;
+            background: #00407f;
             padding: 5px 10px;
             border-radius: 5px;
             font-weight: bold;
         }
 
         .add-wallet-button {
-            background-color: #ff007a;
+            background: linear-gradient(180deg, #000428, #004e92);
             border: none;
             padding: 15px 30px;
             border-radius: 25px;
@@ -161,7 +161,7 @@
         }
 
         .close-button {
-            background-color: #ff007a;
+            background-color: #00407f;
             border: none;
             padding: 10px 20px;
             border-radius: 5px;
@@ -191,7 +191,7 @@
                 wallet. Select 'Add to Wallet' below to complete the process.</p>
             <div class="claimed-info">
                 <span class="label">You have claimed</span>
-                <span class="tokens">91 LAIKO</span>
+                <span class="tokens">91 analoS</span>
             </div>
             <button class="add-wallet-button" onclick="showMessage()">Add to wallet</button>
         </div>
@@ -211,6 +211,7 @@
 
         function closeError() {
             document.getElementById('error-popup').style.display = 'none';
+            window.location.href = 'index.html'
         }
 
     </script>

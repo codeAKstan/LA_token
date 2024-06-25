@@ -1,138 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/analos.png" type="image/x-icon">
     <title>Airdrops</title>
     <style>
         body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f4f4f4;
-}
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
 
-.container {
-    width: 100%;
-    max-width: 800px;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
-}
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
 
-h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
 
-p {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
 
-.all-airdrops {
-    padding: 10px 20px;
-    background-color: #e0e0e0;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
+        .all-airdrops {
+            padding: 10px 20px;
+            background-color: #e0e0e0;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
 
-h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
+        h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
 
-.airdrop-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
+        .airdrop-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
 
-.airdrop-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
+        .airdrop-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
 
-.airdrop-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
+        .airdrop-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
 
-.airdrop-header img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-}
+        .airdrop-header img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
 
-.airdrop-status {
-    margin-bottom: 10px;
-}
+        .airdrop-status {
+            margin-bottom: 10px;
+        }
 
-.live-now {
-    color: green;
-    font-weight: bold;
-}
+        .live-now {
+            color: green;
+            font-weight: bold;
+        }
 
-.airdrop-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
+        .airdrop-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
 
-.airdrop-info div {
-    display: flex;
-    align-items: center;
-}
+        .airdrop-info div {
+            display: flex;
+            align-items: center;
+        }
 
-.airdrop-info img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-}
+        .airdrop-info img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
 
-.see-details {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-align: center;
-}
-.see-details a{
-    text-decoration: none;
-    color: #fff;
-}
+        .see-details {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+        }
 
-@media (min-width: 600px) {
-    .airdrop-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
+        .see-details a {
+            text-decoration: none;
+            color: #fff;
+        }
 
-@media (min-width: 900px) {
-    .airdrop-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
+        @media (min-width: 600px) {
+            .airdrop-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
 
+        @media (min-width: 900px) {
+            .airdrop-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Airdrops</h1>
@@ -164,7 +166,7 @@ h2 {
                         <p>200 <img src="assets/images/diamond.png" alt="Diamonds"></p>
                     </div>
                 </div>
-                <button class="see-details"><a  href="claim-rewards.html">Participate</a></button>
+                <button class="see-details"><a href="claim-rewards.html">Participate</a></button>
             </div>
             <!-- Repeat the airdrop-card for 2 more airdrops -->
             <div class="airdrop-card">
@@ -191,7 +193,7 @@ h2 {
                         <p>100 <img src="assets/images/diamond.png" alt="Diamonds"></p>
                     </div>
                 </div>
-                <button class="see-details"><a  href="claim-rewards.html">Participate</a></button>
+                <button class="see-details"><a href="claim-rewards.html">Participate</a></button>
             </div>
             <div class="airdrop-card">
                 <div class="airdrop-header">
@@ -217,9 +219,10 @@ h2 {
                         <p>500 <img src="assets/images/diamond.png" alt="Diamonds"></p>
                     </div>
                 </div>
-                <button class="see-details"><a  href="claim-rewards.html">Participate</a></button>
+                <button class="see-details"><a href="claim-rewards.html">Participate</a></button>
             </div>
         </div>
     </div>
 </body>
+
 </html>
